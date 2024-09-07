@@ -45,7 +45,7 @@ func _physics_process(delta):
 		goo = !goo
 		$ReverseGear.stop()
 		#$Honk.play()
-		print("ib ibverse", goo)
+		#print("ib ibverse", goo)
 		#if goo == true and recul == false:
 			#recul=true
 			#$Honk.play()
@@ -97,7 +97,7 @@ func process_accel(delta):
 	if Input.is_action_pressed("ui_up"):
 		$Ralenti.stop()
 		if(accelerateStatus == false and round(speed) < 10.9):
-			print("speed ",speed)
+			#print("speed ",speed)
 			accelerate()
 		if( ( round(speed) > 11 and round(speed) < 11.1 ) or ( round(speed) > 18 and round(speed) < 18.1) ):
 			$Accelerating.stop()
@@ -170,9 +170,6 @@ func process_steer(delta):
 	if Input.is_action_just_released("ui_right"):
 		$Turn.stop()
 		turn = false
-
-	if Input.is_action_pressed("ui_right"):
-		print("brakeRR")
 
 func process_brake(delta):
 	if ( Input.is_action_pressed("ui_select") and not Input.is_action_pressed("ui_up") ):

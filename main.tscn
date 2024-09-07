@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://yexejxsnlqvn"]
+[gd_scene load_steps=34 format=3 uid="uid://yexejxsnlqvn"]
 
 [ext_resource type="Script" path="res://cars/BaseCar.gd" id="1_6tmgj"]
 [ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://cars/Models/Doge/Wheel.glb" id="2_hwo3e"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://cyoudvhgjmy5" path="res://Assets/Audio/public_sounds_honk.mp3" id="12_lvi6y"]
 [ext_resource type="AudioStream" uid="uid://bsg4egxqqhqk5" path="res://Assets/Audio/ReverseGear.ogg" id="13_6qugk"]
 [ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="17_30ghh"]
+[ext_resource type="Script" path="res://addons/crypto/scripts/boxCrypto_3D.gd" id="18_fykje"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yc8e5"]
 font_size = 32
@@ -398,7 +399,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1000)
 shape = SubResource("WorldBoundaryShape3D_ahskd")
 
 [node name="Disc" parent="." instance=ExtResource("6_h0i2b")]
-transform = Transform3D(-0.307504, 0, 0.95308, 0, 1, 0, -0.95308, 0, -0.307504, 14.9441, -0.0354118, -20.2879)
+transform = Transform3D(0.677991, 0, -0.737019, 0, 1, 0, 0.737019, 0, 0.677991, 14.9441, -0.0354118, -20.2879)
 
 [node name="BobbingPlatform" parent="." instance=ExtResource("7_6bw4t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.456, 0.429488, -21.611)
@@ -430,5 +431,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.456, 0.545267, -37.611)
 [node name="HTTPManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("17_30ghh")
+
+[node name="BoxCrypto_3D" type="Label3D" parent="." node_paths=PackedStringArray("crypto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6913, 6.68992, 0)
+script = ExtResource("18_fykje")
+crypto = NodePath(".")
 
 [connection signal="finished" from="car/StartEngine" to="car" method="_on_start_engine_finished"]

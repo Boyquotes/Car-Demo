@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://addons/HTTPManager/example/HTTPManager-Example.gd" id="1_2hlte"]
 [ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="2_o1fp1"]
-[ext_resource type="Texture2D" uid="uid://bph6yp8jp8div" path="res://icon.svg" id="3_ryo4l"]
+[ext_resource type="Texture2D" uid="uid://cylv6x1xh8p4p" path="res://icon.svg" id="3_ryo4l"]
 
 [node name="HTTPManager-Example" type="Control"]
 layout_mode = 3

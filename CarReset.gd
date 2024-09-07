@@ -6,7 +6,7 @@ var init_transform : Transform3D
 
 func init():
 	init_transform = car.transform
-	print("init transform %s " % init_transform)
+	#print("init transform %s " % init_transform)
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):

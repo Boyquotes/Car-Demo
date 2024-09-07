@@ -3,7 +3,10 @@
 class_name BoxCrypto_3D
 extends Label3D
 
-const requestsManager = preload("res://scenes/requestsManager.tscn")
+#const requestsManager = preload("res://scenes/requestsManager.tscn")
+const requestsManager = preload("res://Scenes/requestsManager.tscn")
+
+#@onready var requestsManager : HTTPManager = %HTTPManager
 
 @export var Symbol = "BTC"
 @export var numberCoin = ""

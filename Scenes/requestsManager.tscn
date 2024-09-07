@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://k8hbiuolln7p"]
+
+[ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="1_joji2"]
+
+[node name="HTTPManager" type="Node"]
+script = ExtResource("1_joji2")

@@ -3,7 +3,8 @@
 class_name Crypto3D
 extends Label3D
 
-#const requestsManager = preload("res://scenes/requestsManager.tscn")
+#const requestsManager = preload("res://Main.tscn")
+const requestsManager = preload("res://Scenes/requestsManager.tscn")
 
 @export var Symbol = "BTC"
 
@@ -13,7 +14,9 @@ signal timeout
 var timer
 var format_string = "%*.*f"
 
-@onready var requestsManager : HTTPManager = %HTTPManager
+
+#var requestsManager : HTTPManager = get_node("HTTPManager")
+#@onready var requestsManager : HTTPManager = %HTTPManager
 
 func _enter_tree() -> void:
 	print('crypto')
