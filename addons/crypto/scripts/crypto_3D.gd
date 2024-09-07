@@ -9,7 +9,7 @@ const requestsManager = preload("res://Scenes/requestsManager.tscn")
 @export var Symbol = "BTC"
 
 @export var crypto = get_node(".")
-var wait_time = 2
+var wait_time = 5
 signal timeout
 var timer
 var format_string = "%*.*f"
@@ -19,9 +19,9 @@ var format_string = "%*.*f"
 #@onready var requestsManager : HTTPManager = %HTTPManager
 
 func _enter_tree() -> void:
-	print('crypto')
-	print(crypto)
-	print(crypto.font_size)
+	#print('crypto')
+	#print(crypto)
+	#print(crypto.font_size)
 	#if crypto.font_size == 32:
 	#	crypto.font_size=320
 	_request_price(crypto)
@@ -40,7 +40,7 @@ func _process(delta):
 	pass
 
 func _on_Timer_timeout():
-	print('lalala4')
+	#print('_on_Timer_timeout')
 #	print(get_node("."))
 #	print(get_node(".").Symbol)
 	_request_price(get_node("."))
@@ -141,4 +141,4 @@ func _http_request_completed(result, response_code, headers, body):
 
 
 func _on_crypto_price_3d_timeout():
-	print('lalala3')
+	print('timeout price 3d')
