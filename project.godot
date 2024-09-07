@@ -17,7 +17,7 @@ config/icon="res://project_icon.png"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/HTTPManager/plugin.cfg", "res://addons/crypto/plugin.cfg")
+enabled=PackedStringArray("res://addons/HTTPManager/plugin.cfg", "res://addons/crypto/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [rendering]
 
